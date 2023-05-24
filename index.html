@@ -4,27 +4,52 @@
     <title>Save the Date</title>
     <style>
         body {
-            background-image: url("https://cdn.pixabay.com/photo/2018/08/16/19/56/wedding-rings-3611277_1280.jpg"); /* Replace with the URL of your background image */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url("https://cdn.pixabay.com/photo/2018/08/16/19/56/wedding-rings-3611277_1280.jpg");
             background-size: cover;
             background-position: center;
-            font-family: Arial, sans-serif;
+        }
+
+        .overlay {
+            position: relative;
+        }
+
+        .countdown {
+            font-size: 48px;
             color: white;
-            text-align: center;
-            padding-top: 100px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 50%;
         }
 
         h1 {
             font-size: 36px;
-        }
-
-        #countdown {
-            font-size: 48px;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Save the Date!!</h1>
-    <div id="countdown"></div>
+    <div class="background-image"></div>
+    <div class="overlay">
+        <h1>Save the Date!!</h1>
+        <div class="countdown" id="countdown"></div>
+    </div>
 
     <script>
         // Set the wedding date (14th February 2024)
@@ -47,10 +72,6 @@
 
         // Update the countdown every second
         setInterval(updateCountdown, 1000);
-
-        // You can use this code to fetch and update the background image dynamically from the internet
-        // var imageUrl = "https://example.com/api/get-random-image"; // Replace with the API URL to fetch the image
-        // document.body.style.backgroundImage = "url('" + imageUrl + "')"; // Set the fetched image as the background
     </script>
 </body>
 </html>
