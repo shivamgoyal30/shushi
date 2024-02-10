@@ -41,7 +41,7 @@ a:hover {
 p, ul, ol {
   margin-bottom: 1.5em;
   font-size: 16px;
-  color: #848484;
+  color: #000000;
   font-family: "Open Sans", Arial, sans-serif;
 }
 
@@ -1418,6 +1418,13 @@ figure {
 
 .timeline-title {
   margin-top: 0;
+  color:#F69D9D;
+}
+
+.timeline-title-big {
+  margin-top: 0;
+  color:#F69D9D;
+  font-size: 80px;
 }
 
 .date {
